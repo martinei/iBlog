@@ -19,8 +19,9 @@ module Markdown
     # Some objects have more than one field to render as html.
     # For those, cache the markup engine.
     if @_markdown_engine.nil?
-      options = Rails.application.config.redcarpet_options
-      @_markdown_engine = Redcarpet::Markdown.new(Redcarpet::Render::HTML.new(:hard_wrap => false), options)
+      renderer = Redcarpet::Render::HTML.new(:hard_wrap => false)
+      @_markdown_engine = Redcarpet::Markdown.new(renderer,
+          Rails.application.config.redcarpet_extensions)
     end
     @_markdown_engine.render(markdown)
   end
