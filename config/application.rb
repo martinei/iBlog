@@ -73,7 +73,8 @@ module Iblog
     config.redcarpet_extensions = {
       :autolink => true,
       :fenced_code => true,
-      :gh_blockcode => true
+      :gh_blockcode => true,
+      :footnotes => true
     }
   end
 end
