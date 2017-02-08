@@ -3,6 +3,9 @@ atom_feed do |feed|
   feed.updated @statuses.first.updated_at if @statuses.first
   feed.subtitle "weekly internal innoQ blog"
   feed.generator "i-Blogs Custom ATOM Feed Generator 1.0", :uri => root_url
+  feed.link href: url_for(only_path: false), rel: 'first'
+  feed.link href: url_for(only_path: false, params: Rack::Utils.parse_query(URI(path_to_next_page(@statuses)).query)), rel: 'next' if path_to_next_page(@statuses)
+  feed.link href: url_for(only_path: false, params: Rack::Utils.parse_query(URI(path_to_prev_page(@statuses)).query)), rel: 'previous' if path_to_prev_page(@statuses)
 
   @statuses.each do |status|
     feed.entry status do |entry|

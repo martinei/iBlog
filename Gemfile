@@ -5,7 +5,7 @@ gem 'mysql2', '~> 0.3.20'
 gem 'jquery-rails', '~> 4.2.1'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
 # gem 'turbolinks', '~> 5'
-gem 'kaminari', '~> 0.17.0'
+gem 'kaminari', '~> 1.0.1'
 gem 'kaminari-i18n'
 gem 'rails-i18n'
 gem 'redcarpet'
