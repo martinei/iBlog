@@ -26,7 +26,7 @@ Gem::Specification.new do |s|
   s.add_dependency 'sass-rails'
   s.add_dependency 'bootstrap', '~> 4.0.0'
   s.add_dependency 'uglifier', '>= 1.3.0'
-  s.add_dependency 'therubyracer'
+  s.add_dependency 'mini_racer'
   s.add_dependency 'coffee-rails', '~> 4.2.0'
 
   s.add_development_dependency 'sqlite3'
