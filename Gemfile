@@ -33,7 +33,7 @@ group :development do
 end
 
 gem 'sass-rails'
-gem 'bootstrap', '~> 4.0.0'
+gem 'bootstrap', '~> 4.1.3'
 gem 'uglifier', '>= 1.3.0'
 gem 'mini_racer'
 gem 'coffee-rails', '~> 4.2.0'

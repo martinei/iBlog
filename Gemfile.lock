@@ -43,10 +43,10 @@ GEM
     addressable (2.5.2)
       public_suffix (>= 2.0.2, < 4.0)
     arel (8.0.0)
-    autoprefixer-rails (8.2.0)
+    autoprefixer-rails (9.4.2)
       execjs
     awesome_print (1.8.0)
-    bootstrap (4.0.0)
+    bootstrap (4.1.3)
       autoprefixer-rails (>= 6.0.3)
       popper_js (>= 1.12.9, < 2)
       sass (>= 3.5.2)
@@ -123,7 +123,7 @@ GEM
     nio4r (2.3.1)
     nokogiri (1.8.5)
       mini_portile2 (~> 2.3.0)
-    popper_js (1.12.9)
+    popper_js (1.14.5)
     pry (0.11.3)
       coderay (~> 1.1.0)
       method_source (~> 0.9.0)
@@ -218,7 +218,7 @@ DEPENDENCIES
   acts-as-taggable-on (~> 5.0.0)
   addressable
   awesome_print
-  bootstrap (~> 4.0.0)
+  bootstrap (~> 4.1.3)
   byebug
   capybara (~> 2.11.0)
   coffee-rails (~> 4.2.0)

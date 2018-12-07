@@ -24,7 +24,7 @@ Gem::Specification.new do |s|
   s.add_dependency 'acts-as-taggable-on', '~> 5.0.0'
   s.add_dependency 'simple_form', '~> 4.0.0'
   s.add_dependency 'sass-rails'
-  s.add_dependency 'bootstrap', '~> 4.0.0'
+  s.add_dependency 'bootstrap', '~> 4.1.3'
   s.add_dependency 'uglifier', '>= 1.3.0'
   s.add_dependency 'mini_racer'
   s.add_dependency 'coffee-rails', '~> 4.2.0'
