@@ -9,7 +9,7 @@ require 'simple_form'
 require 'sass-rails'
 require 'bootstrap'
 require 'uglifier'
-require 'mini_racer'
+require 'therubyracer'
 require 'coffee-rails'
 require 'acts-as-taggable-on'
 

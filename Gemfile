@@ -35,5 +35,5 @@ end
 gem 'sass-rails'
 gem 'bootstrap', '~> 4.1.3'
 gem 'uglifier', '>= 1.3.0'
-gem 'mini_racer'
+gem 'therubyracer'
 gem 'coffee-rails', '~> 4.2.0'
