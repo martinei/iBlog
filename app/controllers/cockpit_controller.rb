@@ -15,13 +15,13 @@
 
 class CockpitController < ApplicationController
 
+
+  before_action :fetch_status
+
   def index
-    currentWeek = Date.new.cweek
-    fetch_status
   end
 
   def show
-    fetch_status
     case params[:type].downcase
     when "weekly_status"
       @status = WeeklyStatus.includes(:comments)
@@ -36,10 +36,10 @@ class CockpitController < ApplicationController
   private
 
   def fetch_status
-    currentWeek = Date.current.cweek
-    namesAndWeek = [["Diese Woche", currentWeek]] +
-        5.times.map {|week| (currentWeek - week - 1)}.map {|week| ["KW #{week}", week]}
-    @wochenstatuses = namesAndWeek.map {|(name, week)| [name, WeeklyStatus.by_week(week)]}
+    current_week = Date.current.cweek
+    names_and_weeks = [["Diese Woche", current_week]] +
+        5.times.map {|week| (current_week - week - 1)}.map {|week| ["KW #{week}", week]}
+    @wochenstatuses = names_and_weeks.map {|(name, week)| [name, WeeklyStatus.by_week(week)]}
   end
 
 end
