@@ -15,31 +15,31 @@
 
 class CockpitController < ApplicationController
 
-	def index
-		currentWeek =  Date.new.cweek
-		fetch_status
-	end
+  def index
+    currentWeek = Date.new.cweek
+    fetch_status
+  end
 
-	def show
-		fetch_status
-		case params[:type].downcase
-			when "weekly_status"
-				@status = WeeklyStatus.includes(:comments)
-					.references(:comments)
-					.find(params[:id])
-			when "entry"
+  def show
+    fetch_status
+    case params[:type].downcase
+    when "weekly_status"
+      @status = WeeklyStatus.includes(:comments)
+                    .references(:comments)
+                    .find(params[:id])
+    when "entry"
 
-		end
-		render "index"
-	end
+    end
+    render "index"
+  end
 
-	private
+  private
 
-	def fetch_status
-		currentWeek =  Date.current.cweek
-		namesAndWeek =  [ [ "Diese Woche", currentWeek ]]  +
-				5.times.map {|week| (currentWeek - week - 1)}.map { |week|  ["KW #{week}" , week]}
-		@wochenstatuses = namesAndWeek.map {|(name, week)| [name, WeeklyStatus.by_week(week)]}
-	end
+  def fetch_status
+    currentWeek = Date.current.cweek
+    namesAndWeek = [["Diese Woche", currentWeek]] +
+        5.times.map {|week| (currentWeek - week - 1)}.map {|week| ["KW #{week}", week]}
+    @wochenstatuses = namesAndWeek.map {|(name, week)| [name, WeeklyStatus.by_week(week)]}
+  end
 
 end
