@@ -1,0 +1,32 @@
+<%= content_for :title, 'Cockpit' %>
+
+
+
+<div class="container">
+	<div class="row">
+		<div class="col-sm-4">
+			<ul>
+				<li>Wochenstatus</li>
+				<ul>
+					<% @wochenstatuses.each do |week, statuses| %>
+						<li><%= week%>
+							<ul>
+								<% statuses.each do |status| %>
+									<li><%= link_to status.author.name, cockpit_type_path( id: status.id, type: 'weekly_status') %></li>
+							<% end %>
+							</ul>
+						</li>
+					<% end %>
+				</ul>
+				<li>PPP</li>
+			</ul>
+		</div>
+
+		<div class="col-sm">
+			<% if @status %>
+				<h1><%= @status.title %></h1>
+					<%= render @status %>
+			<% end %>
+		</div>
+	</div>
+</div>

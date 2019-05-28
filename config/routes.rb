@@ -27,6 +27,10 @@ Rails.application.routes.draw do
     end
   end
 
+
+  get '/cockpit', to: 'cockpit#index'
+  get '/cockpit/:type/:id', to: 'cockpit#show',  as: :cockpit_type
+
   resources :comments
 
   resources :entries do
